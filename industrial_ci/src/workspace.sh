@@ -174,7 +174,6 @@ function ici_setup_git_client {
   if [ -d ~/.ssh ]; then
     ici_install_pkgs_for_command ssh ssh-client
   fi
-  ici_cmd ici_asroot "git config --system --add safe.directory '*'"
 }
 
 function ici_vcs_import {
