@@ -157,6 +157,8 @@ function ici_init_apt {
     if [ -n "${debs[*]}" ]; then
         ici_apt_install "${debs[@]}" || ici_error "One or more additional deb installation is failed. Exiting."
     fi
+
+    ici_cmd ici_asroot git config --system --add safe.directory '*'
 }
 
 function ici_install_pkgs_for_command {
