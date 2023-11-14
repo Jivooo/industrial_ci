@@ -42,6 +42,8 @@ if [ "$DEBUG_BASH" = true ]; then set -x; fi # print trace if DEBUG
 
 ici_configure_ros
 
+git config --system --add safe.directory '*'
+
 export TARGET_WORKSPACE=${TARGET_WORKSPACE:-$TARGET_REPO_PATH}
 export BASEDIR=${BASEDIR:-$HOME}
 
