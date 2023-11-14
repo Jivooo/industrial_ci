@@ -108,8 +108,6 @@ function ici_isolate() {
                         -w "$TARGET_REPO_PATH" \
                         "$DOCKER_IMAGE" \
                         /bin/bash "$ICI_SRC_PATH/run.sh" "$file" "$@"
-
-  ici_run_cmd_in_docker "git config --system --add safe.directory '*'"
 }
 #######################################
 # wrapper for running a command in docker
